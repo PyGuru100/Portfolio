@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Low-key Locales {{cafe.name}}</title>
+    {% include 'header.html' %}
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/cafe_page.css">
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+
+    </style>
+
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+
+
+    </script>
+
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<div id="banner-div">
+        <div id="cafe-name" class="image-overlay">
+        <div class="overlay-inner">
+            <h1 class=""> {{cafe.name}}</h1>
+        </div>
+    </div>
+    <div class="image-overlay" id="cafe-location">
+        <div class="overlay-inner">
+            <h2> ⬇️ Location ⬇️</h2>
+        </div>
+    </div>
+    <img id="cafe-img" src="{{cafe.img_url}}">
+</div>
+<div id="map">
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBa_fXPXXdOXyOGCrqTdZXExplYUD_Wzqs&callback=initMap&libraries=&v=weekly"
+            async
+    ></script>
+</div>
+
+
+{% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yazan Amer: {{vars_dict['job_title']}}</title>
+    <link rel="stylesheet" href="../static/css/both.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/{{vars_dict['css']}}.css">
+</head>
+
+<body>
+
+<div id="banner">
+    <h1>
+        Yazan Amer: {{vars_dict['job_title']}}
+    </h1>
+    <img class="cute-icon" src="../static/{{vars_dict['img_name']}}.png" alt='{{vars_dict["img_name"]}}.png'>
+</div>
+
+<a href="{{url_for('home')}}">
+    <div class="cell bottom-row left-col" id="sq3">
+        <h2> Contact Me!</h2>
+    </div>
+</a>
+
+<a href="{{url_for('home')}}">
+    <div class="cell bottom-row right-col" id="sq4">
+        <h2> Back .. </h2>
+    </div>
+</a>
+
+<a href="{{vars_dict['special_link']}}">
+    <div class="cell top-row right-col" id="sq2">
+        <h2> {{vars_dict['special_tile']}} </h2>
+    </div>
+</a>
+
+<a href="{{vars_dict['resume']}}">
+    <div class="cell top-row left-col" id="sq1">
+        <h2> Resume </h2>
+    </div>
+</a>
+
+</body>
+
+
+</html>

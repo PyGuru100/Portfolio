@@ -1,0 +1,25 @@
+#cafe-img {
+width: 100%;
+height: auto;
+}
+
+#cafe-name {
+margin-top: 5%;
+}
+.overlay-inner {
+width: 50%;
+text-align: center;
+color: black;
+background-color: white;
+border: black;
+border-radius: 15px;
+}
+.image-overlay {
+width: 100%;
+position: absolute;
+display: flex;
+justify-content: center;
+}
+#cafe-location {
+margin-top: 30%;
+}

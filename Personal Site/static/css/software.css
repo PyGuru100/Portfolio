@@ -1,0 +1,8 @@
+:root {
+--height_of_top_div: 40%;
+--height_of_bottoms: calc((100% - var(--height_of_top_div))/2);
+--second_color: #314e52;
+--first_color: #e7e6e1;
+--base_color: #f7f6e7;
+--font_color: #f2a154;
+}

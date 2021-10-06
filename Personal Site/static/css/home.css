@@ -1,0 +1,129 @@
+/* https://colorhunt.co/palette/258333 */
+/* https://css-tricks.com/fitting-text-to-a-container/
+ https://css-tricks.com/almanac/properties/o/overflow/
+ */
+
+/*
+ original, prob favorite:
+--chem_color: #314e52;
+--software_color: #e7e6e1;
+--base_color: #f7f6e7;
+--font_color: #f2a154;
+ */
+
+/*
+--chem_color: #d0e8f2;
+--software_color: #79a3b1;
+--base_color: #fcf8ec;
+--font_color: #456268;
+*/
+
+/*
+--chem_color: #eabf9f;
+--software_color: #b68973;
+--base_color: #faf3e0;
+--font_color: #1e212d;
+
+*/
+
+/*
+--chem_color: #ffd6a4;
+--software_color: #fde9df;
+--base_color: #fffdfb;
+--font_color: #0881a3;
+
+*/
+
+/*
+--chem_color: #ffd6a4;
+--software_color: #fde9df;
+--base_color: #f4f9f9;
+--font_color: #0881a3;
+
+--chem_color: #314e52;
+--software_color: #e7e6e1;
+--base_color: #f7f6e7;
+--font_color: #f2a154;
+
+*/
+:root {
+--height_of_top_div: 35%;
+--height_of_bottoms: calc(100% - var(--height_of_top_div));
+--chem_color: #314e52;
+--software_color: #e7e6e1;
+--base_color: #f7f6e7;
+--font_color: #f2a154;
+}
+
+
+/* HTML TAGS */
+body {
+margin: 0;
+color: var(--font_color);
+font-family: 'El Messiri', sans-serif;
+}
+/* Classes */
+.welcome-message {
+padding: 3vmin 0 0 0;
+margin: 0;
+font-size: 5vmin;
+}
+.cute-icon {
+border-radius: 35%;
+width: 25vmin;
+height: auto;
+background-color: var(--base_color);
+margin-bottom: 0;
+}
+
+.hover-text {
+margin-top: 25%;
+}
+
+
+/* IDs */
+
+#welcome-message-div {
+height: var(--height_of_top_div);
+position: absolute;
+bottom: var(--height_of_bottoms);
+width: 100%;
+text-align: center;
+background-color: var(--base_color);
+overflow: auto;
+}
+#right-half, #left-half, #hover-left, #hover-right {
+position: absolute;
+top: var(--height_of_top_div);
+width: 50%;
+height: var(--height_of_bottoms);
+text-align: center;
+font-size: 5vmin;
+overflow: auto;
+transition: 0.5s ease;
+}
+
+#right-half {
+background-color: var(--software_color);
+right: 50%;
+}
+
+#left-half {
+background-color: var(--chem_color);
+left: 50%;
+}
+
+#hover-left, #hover-right {
+background-color: var(--font_color);
+color: var(--base_color);
+opacity: 0;
+}
+
+#hover-left {left: 50%;
+}
+#hover-right {right: 50%;
+}
+
+#hover-left:hover, #hover-right:hover {
+opacity: 0.95;
+}
