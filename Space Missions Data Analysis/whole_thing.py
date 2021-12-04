@@ -4,7 +4,7 @@ import iso3166
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-# The code here is seperated into blocks that either generate useful diagrams or organize and print a useful portion of the data. To use
+# The code here is separated into blocks that either generate useful diagrams or organize and print a useful portion of the data. To use
 # the code, uncomment a block of your choice (blocks are labeled with comments that signify where they start and end) and run the file.
 
 
